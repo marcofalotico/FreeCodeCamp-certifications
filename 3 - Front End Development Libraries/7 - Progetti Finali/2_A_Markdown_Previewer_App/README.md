@@ -1,1 +1,0 @@
-## [A Markdown Previewer App](https://marcofalotico.github.io/A_random_futbol_quotes_generator/)
