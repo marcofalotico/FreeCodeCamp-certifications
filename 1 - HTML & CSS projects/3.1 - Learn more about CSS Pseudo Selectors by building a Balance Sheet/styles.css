@@ -1,0 +1,219 @@
+/* reimposto il modello di scatola con box-sizing:border-box */
+
+html{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif #0a0a23;
+    color: #0a0a23;
+}
+
+/*
+The span[class~="sr-only"] selector will select any span element whose class includes sr-only. 
+Elements with this class completely hidden from the visual page, but still be announced by screen readers.
+
+"!important" keyword to ensure these properties are always applied, regardless of order or specificity.
+*/
+
+span[class~="sr-only"] {
+    border: 0 !important;
+
+    /* clip property is used to define the visible portions of an element. */
+    clip: rect(1px, 1px, 1px, 1px);
+
+    /* clip-path property determines the shape the clip property should take. */
+    clip-path: inset(50%);
+    -webkit-clip-path: inset(50%);
+    
+    /* Per ridimensionare questi elementi */
+    width: 1px;
+    height: 1px;
+
+    /* Per evitare che il contenuto del testo trabocchi */
+    overflow: hidden;
+    white-space: nowrap;
+
+    /* Per togliere questi elementi nascosti dal flusso del documento.  
+    Ciò garantirà che non solo non siano più visibili, ma non siano nemmeno all'interno della visualizzazione della pagina. */
+    position: absolute;
+    padding:0;
+    margin: -1px;
+}
+
+h1{
+    max-width: 37.25rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem;
+}
+
+h1 .flex{
+
+    /* Per abilitare il layout flexbox */
+    display: flex;
+
+    /* display the nested elements from bottom to top. */
+    flex-direction: column-reverse;
+
+    /* create some space between the elements. */
+    gap: 1rem;
+}
+
+/* Lo pseudo-selettore :first-of-type viene utilizzato per indirizzare il primo elemento che corrisponde al selettore */
+h1 .flex span:first-of-type{
+    font-size: 0.7em;
+}
+
+/* Lo pseudo-selettore :last-of-type fa l'esatto opposto: si rivolge all'ultimo elemento che corrisponde al selettore. */
+h1 .flex span:last-of-type{
+    font-size: 1.2em;
+}
+
+section{
+    max-width: 40rem;
+    margin: 0 auto;
+    border: 2px solid #d0d0d5;
+}
+
+#years {
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    position:sticky;
+    color: #fff;
+    background-color: #0a0a23;
+    z-index: 999;
+    margin: 0 -2px;
+
+    /* La funzione calc() è una funzione CSS che consente di calcolare un valore in base ad altri valori. 
+    Ad es.
+    .example {
+        margin: 10px;
+        width: calc(100% - 20px);
+    } */
+    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+}
+
+/* La sintassi span[class] si rivolge a qualsiasi elemento span che ha un set di attributi class, indipendentemente dal valore dell'attributo. */
+#years span[class]{
+    text-align: right;
+    font-weight: bold;
+    width: 4.5rem;
+}
+
+.table-wrap {
+    padding:0 0.75rem 1.5rem 0.75rem;
+}
+
+/* Lo pseudo-selettore :not() viene utilizzato per indirizzare tutti gli elementi che non corrispondono al selettore - 
+in questo caso, uno qualsiasi degli elementi span che non ha la classe sr-only. 
+
+Ciò garantisce che le tue regole precedenti per il selettore span[class~="sr-only"] non vengano sovrascritte.
+
+Avendo usato "!important" posso non usare il :not(.sr-only) 
+
+span:not(.sr-only){
+    font-weight: normal;
+}
+
+Diventa quindi:
+span {
+    font-weight: normal;
+}
+
+Ora tutti hanno uno stile più specifico, il che significa che puoi rimuovere la tua regola di span.
+*/
+
+table {
+
+    /* Consentire ai bordi delle celle di collassare in un unico bordo, invece di un bordo attorno a ciascuna cella. */
+    border-collapse: collapse;
+
+    /* Nascondere i confini stessi */
+    border: 0;
+    width: 100%;
+    margin-top: 3rem;
+    position: relative;
+}
+
+table caption {
+    color: #356eaf;
+    font-size: 1.3em;
+    font-weight: normal;
+    position: absolute;
+    top: -2.25rem;
+    left: 0.5rem;
+}
+
+tbody td {
+    width: 100vw;
+    min-width: 4rem;
+    max-width: 4rem;
+}
+
+tbody th{
+    width: calc(100% - 12rem);
+}
+
+/* Il selettore [attribute="value"] si rivolge a qualsiasi elemento che abbia un attributo con un valore specifico. */
+tr[class="total"] {
+    border-bottom: 4px double #0a0a23;
+    font-weight: bold;
+}
+
+tr[class="total"] th {
+    text-align: left;
+    padding: 0.5rem 0 0.25rem 0.5rem;
+}
+
+/* 
+tr[class="total"]    selezionerà gli elementi tr in cui l'unica classe è total. 
+tr.total             selezionerà gli elementi tr in cui la classe include total. */
+
+tr.total td{
+    text-align: right;
+    padding: 0 0.25rem;
+}
+
+/* Lo pseudo-selettore :nth-of-type() viene utilizzato per indirizzare elementi specifici 
+in base al loro ordine tra i fratelli dello stesso tipo. */
+tr.total td:nth-of-type(3){
+    padding-right:0.5rem;
+  }
+
+tr.total:hover {
+    background-color: #99c9ff;
+}
+
+td.current {
+    font-style: italic;
+}
+
+tr.data {
+    background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+}
+
+tr.data th {
+    text-align:left;
+    padding-top:0.3rem;
+    padding-left:0.5rem;
+}
+
+tr.data th .description {
+    display: block;
+    font-weight: normal;
+    font-style: italic;
+    padding: 1rem 0 0.75rem;
+    margin-right: -13.5rem;
+}
+
+/* allineamento dei table data td */
+tr.data td{
+    vertical-align: top;
+    text-align: right;
+    padding: 0.3rem 0.25rem 0;
+}
+
+tr.data td:last-of-type{
+    padding-right: 0.5rem;
+}

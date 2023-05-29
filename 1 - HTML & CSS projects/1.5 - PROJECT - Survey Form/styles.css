@@ -1,0 +1,42 @@
+body{
+    line-height: 1.4;
+    background-color: #d7dcdd;
+    width:500px;
+    /*spostare il contenuto al centro della pagina con margin:"auto"*/
+    margin: auto;
+}
+
+form{
+    background: rgb(147, 5, 5, 0.2);
+    /* il padding è l'offset dai bordi. Sono due perchè il primo è verticale, il secondo in orizzontale*/
+    padding:2.5rem 2.5rem;
+    border-radius: 2rem;
+    min-width: 500px;
+    margin: auto;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: red;
+    color:white;
+    border-radius: 2px;
+    cursor:pointer;
+}
+
+.input-headings {
+    margin: 0 auto 1.25rem auto;
+    padding: 0.25rem;
+}
+
+.form-input {
+    /* gli elementi con questa classe li blocco riga per riga, dunque vanno a capo */
+    display: block;
+    width: 90%;
+    height: 2rem;
+    padding: 0.25rem 0.75rem;
+    background-color: #fff;
+    border:1px solid #ced4da;
+    border-radius: 0.25rem;
+
+}

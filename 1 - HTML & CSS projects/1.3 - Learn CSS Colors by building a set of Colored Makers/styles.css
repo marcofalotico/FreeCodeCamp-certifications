@@ -1,0 +1,62 @@
+h1 {
+    text-align: center;
+  }
+  
+  .container {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 0;
+  }
+  
+  .marker {
+    width: 200px;
+    height: 25px;
+    margin: 10px auto;
+  }
+  
+  .cap {
+    width: 60px;
+    height: 25px;
+  }
+  
+/*
+Il canale alpha nella funzione rgba aggiunge l'opacità al colore rgb. 0.0 è completamente trasparente, 1 completamente opaco.
+*/
+
+  .sleeve {
+    width: 110px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-left: 10px double rgba(0, 0, 0, 0.75);
+  }
+  
+  .cap, .sleeve {
+    display: inline-block;
+  }
+  
+/*
+La proprietà box-shadow applica un'ombra attorno all'elemento. La sintassi base è: box-shadow: offsetX offsetY color;
+I valori per offsetX e offsetY funzionano così:
+
+1- entrambi accettano valori in px o in altri formati .css compatibili
+2- un valore positivo di offsetX muove l'uombra sulla destra, viceversa un valore negativo
+3- un valore positivo di offsetY muove l'ombra verso il basso, viceversa un valore negativo
+4- se si vuole un valore=zero (0) per entrambi i offsetX and offsetY, non serve specificare l'unità (px)
+
+L'altezza e la larghezza dell'ombra è determinata dall'altezza e la larghezza dell'elemento su cui è applicata.
+Si può eventualmente utilizzare un valore spreadRadius per dividere l'ombra.
+*/
+
+  .red {
+    background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+  }
+  
+  .green {
+    background: linear-gradient(#55680D, #71F53E, #116C31);
+    box-shadow: 0 0 20px 0 #3B7E20CC;
+  }
+  
+  .blue {
+    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+    box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+  }

@@ -1,0 +1,104 @@
+<link
+  href="https://fonts.googleapis.com/css?family=Lobster"
+  rel="stylesheet"
+  type="text/css"
+/>
+<style>
+  h2 {
+    font-family: Lobster, Monospace;
+  }
+
+  .thick-green-border {
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%;
+  }
+</style>
+
+<div class="container-fluid">	<!-- Questo div con questa classe contiene tutto il codice tranne i link e lo style -->
+  <div class="row">	<!-- class = "row" indica che gli elementi nidificati andranno tutti sulla stessa riga. Ricorda che una riga contiene 12 colonne -->
+    <div class="col-xs-8">	<!-- vuol dire che questo elemento facente parte della stessa riga comprende le prime 8 colonne, con dimensione xs -->
+      <h2 class="text-primary text-center">CatPhotoApp</h2>
+    </div>
+    <div class="col-xs-4">
+      <a href="#"
+        ><img
+          class="img-responsive thick-green-border"
+          src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+          alt="A cute orange cat lying on its back."
+      /></a>	<!-- la classe img-responsive è una libreria di Bootstrap che rende direttamente l'immagine responsive -->
+    </div>
+  </div>
+  <img
+    src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg"
+    class="img-responsive"
+    alt="Three kittens running towards the camera."
+  />
+  <div class="row">
+    <div class="col-xs-4">
+      <button class="btn btn-block btn-primary">	<!-- la classe "btn" è quella standard di Bootstrap per i bottoni. La classe "btn-block" rende l'elemento largo quanto l'intera riga. La classe "btn-primary" rende l'elemento colorato con il colore primario dell'app -->
+        <i class="fa fa-thumbs-up"></i> Like	<!-- qua si stanno usando i loghi di Font Awesome, richiamati con "fa" e poi il nome del logo dopo -->
+      </button>
+    </div>
+    <div class="col-xs-4">
+      <button class="btn btn-block btn-info">	<!-- la classe "btn-info" da' un colore che richiama al lettore l'attenzione per un info (solitamente grigio) -->
+        <i class="fa fa-info-circle"></i> Info
+      </button>
+    </div>
+    <div class="col-xs-4">
+      <button class="btn btn-block btn-danger">	<!-- la classe "btn-danger" da' un colore che richiama al lettore l'attenzione per ad esempio una cancellazione (solitamente rosso) -->
+        <i class="fa fa-trash"></i> Delete
+      </button>
+    </div>
+  </div>
+  <p>Things cats <span class="text-danger">love:</span></p>	<!-- come per i bottoni, la classe "text-danger" richiama un colore per l'attenzione, rosso -->
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>flea treatment</li>
+    <li>thunder</li>
+    <li>other cats</li>
+  </ol>
+  <form action="https://freecatphotoapp.com/submit-cat-photo">
+    <div class="row">
+      <div class="col-xs-6">
+        <label><input type="radio" name="indoor-outdoor" /> Indoor</label>
+      </div>
+      <div class="col-xs-6">
+        <label><input type="radio" name="indoor-outdoor" /> Outdoor</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-4">
+        <label><input type="checkbox" name="personality" /> Loving</label>
+      </div>
+      <div class="col-xs-4">
+        <label><input type="checkbox" name="personality" /> Lazy</label>
+      </div>
+      <div class="col-xs-4">
+        <label><input type="checkbox" name="personality" /> Crazy</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-7">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="cat photo URL"
+          required
+        />
+      </div>
+      <div class="col-xs-5">
+        <button type="submit" class="btn btn-primary">
+          <i class="fa fa-paper-plane"></i> Submit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

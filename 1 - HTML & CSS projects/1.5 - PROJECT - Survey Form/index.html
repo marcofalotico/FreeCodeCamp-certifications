@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- il titolo sarà in un elemento h1 con id="title" 
+    <title>Document</title> -->
+    <link rel="stylesheet" href="styles.css" />
+    <h1 id="title">Tesla Model Purchase</h1>
+  </head>
+
+  <body>
+    <p id="description">
+      Compila il seguente form per completare il tuo ordine Tesla
+    </p>
+
+
+    <div class="input-headings">
+      <form method="post" action="https://register-demo.freecodecamp.org" id="survey-form">
+          <label for="name" id="name-label">Name <input type="text" id="name" placeholder="Enter your name" class="form-input" required/>
+          </label>
+          <br>
+          <label for="email" id="email-label">E-mail <input type="email" id="email" placeholder="Enter your e-mail address" class="form-input" required/>
+          </label>
+          <br>
+          <label for="number" id="number-label"
+            >Age <input type="number" id="number" placeholder="How old are you?" min="10" max="120" class="form-input" required
+          /></label>
+          <br>
+          <br>
+          <label for="dropdown" id="model">Select model </label>
+            <select id="dropdown" class="form-input">
+              <option value="Model s"> Model s </option>
+              <option value="Model x"> Model x </option>
+              <option value="Model y"> Model y </option>
+            </select>
+          </label>
+          <br>
+          <br>
+          <label for="model_color" id="model_color"> <b> Model color: </b></label>
+          <br>
+          <input type="radio" name="color" id="model_color" value="black" required />
+          <label for="model_color"> Black </label>
+          <br>
+          <input type="radio" name="color" id="model_color" value="red" required />
+          <label for="model_color"> Red </label>
+          <br>
+          <input type="radio" name="color" id="model_color" value="white" required />
+          <label for="model_color"> White </label>
+          <br>
+          <br>
+          <label> <b> Add features: </b> </label>
+          <br>
+          <input type="checkbox" id="checkbox" name="caratteristica" value="autopilota">
+          <label for="checkbox"> Autopilota - 10.000$ </label>
+          <br>
+          <input type="checkbox" id="checkbox" name="caratteristica" value="dual_motor">
+          <label for="checkbox"> Dual motor - 5.000$ </label>
+          <br>
+          <input type="checkbox" id="checkbox" name="caratteristica" value="battery">
+          <label for="checkbox"> Performance plus - 7.000$ </label>
+          <br>
+          <br>
+          <label for="comments"> <b> Add comments: </b> </label>
+          <br>
+            <textarea id="comments" name="comments" placeholder="Enter your comment here" rows="5" cols="40"></textarea>
+          </label>
+          <br>
+          <br>
+          <input id="submit" type="submit" value="Place Order" class="submit-button" />
+        </div>
+      </form>
+  </body>
+</html>

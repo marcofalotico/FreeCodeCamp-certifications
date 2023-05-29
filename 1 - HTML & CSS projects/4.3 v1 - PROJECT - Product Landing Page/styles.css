@@ -1,0 +1,80 @@
+  * {
+    margin:0;
+    padding: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+
+  header{
+    display: flex;
+    justify-content: space-betweens;
+  }
+
+  ul.nav {
+    display: flex;
+  }
+
+  body {
+    color: rgb(20, 30, 40);
+    background-color: rgb(227, 229, 229);
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(20, 30, 40);
+  }
+
+  a:hover {
+    font-weight: bold;
+  }
+
+  section {
+    padding:20px;
+    display: block;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #yt-video {
+    margin: 20px;
+  }
+
+  .bold-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  #submit {
+    width: 200px;
+    height: 40px;
+    border-style: none;
+    background-color: orangered;
+    font-weight: 800;
+    font-size: 1.2rem;
+  }
+
+  .pricing {
+    width: 33%;
+    height: 100%;
+    border: 1px solid black;
+    margin: 20px;
+  }
+
+  .pricing h3 {
+    background-color: rgb(203, 206, 206);
+    text-transform: uppercase;
+  }
+
+  .select-button {
+    width: 100px;
+    height: 40px;
+    background-color: orangered;
+    font-weight: 800;
+    font-size: 1.2rem;
+  }

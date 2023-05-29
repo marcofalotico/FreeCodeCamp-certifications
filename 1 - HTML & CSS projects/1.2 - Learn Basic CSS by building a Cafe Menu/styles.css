@@ -1,0 +1,126 @@
+/* questo è uno style selector */
+/*
+div {
+    width: 80%;
+    background-color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+}
+*/
+
+/* questo è un class selector, con un punto davanti.
+Deve essere richiamato dall'html con un attributo nell'elemento div con valore uguale al nome della classe: <div class="menu"> */
+h1,
+h2,
+p {
+    text-align: center;
+}
+
+.menu {
+    width: 80%;
+    background-color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+    /*
+    padding-left:20px;
+    padding-right:20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    */
+    /* padding da solo lo fa nelle 4 direzioni */
+    padding: 20px;
+    max-width: 500px;
+}
+
+body {
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+h1, h2 {
+    font-family: Impact, serif;
+}
+
+/* visto che ho creato la classe "flavor", posso stilizzarla */
+.flavor, .dessert {
+    text-align: left;
+    width: 50%;
+}
+.price{
+    text-align:right;
+    width: 50%;
+}
+
+/* stilizzo TUTTI gli elementi p dell'elemento madre article a cui è stata assegnata la classe .item in una riga unica */
+.item p {
+    display:inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.established {
+    font-style: italic;
+}
+
+h1 {
+    font-size:40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size:30px;
+}
+
+hr {
+    height:2px;
+    background-color: brown;
+    border-color: brown;
+}
+
+.bottom-line {
+    margin-top: 25px;
+}
+
+/*FOOTER*/
+footer {
+    font-size:14px;
+}
+
+  /*indipendentemente se qualcuno clicca il link, setto lo stile col colore nero
+  a {
+    color:black;
+  }
+  */
+
+  /* se invece voglio che sia di uno specifico colore se viene cliccato il link: */
+a:visited {
+    color: black;
+}
+
+    /* similmente, se voglio che cambi colore al passaggio del mouse: */
+a:hover {
+    color: brown;
+}
+      
+a:active {
+    color: brown;
+}
+
+.address {
+    margin-bottom:5px;
+}
+
+img {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    /* al posto di settare il margin-top:0px; degli elementi h2 "Desserts" e "Coffee": */
+    margin-top: -25px;
+}
+
+.address {
+    background: linear-gradient();
+}

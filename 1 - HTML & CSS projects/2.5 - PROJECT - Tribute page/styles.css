@@ -1,0 +1,39 @@
+image {
+    max-width:fit-content;
+    height: fit-content;
+    width: auto;
+    justify-content: center;
+    margin: 0;
+    margin: auto;
+}
+
+img{
+    max-width: 100%;
+    width: auto;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+h1, h2, h3, p, figcaption {
+    text-align: center;
+    display: block;
+}
+
+.info{
+    max-width: 100%;
+    padding: 0.8rem;
+    display: block;
+}
+
+body{
+    background-color: beige;
+}
+
+.img-background{
+    width: 95%;
+    height: fit-content;
+    background-color: white;
+    margin: auto;
+}

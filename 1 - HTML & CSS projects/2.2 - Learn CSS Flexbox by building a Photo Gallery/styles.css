@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    /*object-fit: cover dice alle immagini di adattarsi all'aspect ratio definito, senza distorcersi*/
+    object-fit: cover;
+    border-radius:10px;
+
+  }
+
+body{
+    margin:0;
+    font-family:sans-serif;
+    background-color:#f5f6f7;
+}
+
+.header h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding:20px 10px;
+    max-width:1400px;
+    margin:0 auto;
+    gap:16px;
+  }
+
+/*Lo pseudo-elemento ::after crea un elemento che è l'ultimo figlio dell'elemento selezionato.
+Puoi usarlo per aggiungere un elemento vuoto dopo l'ultima immagine. Se gli dai la stessa larghezza 
+delle immagini, spingerà l'ultima immagine a sinistra quando la galleria è in un layout a due colonne. 
+In questo momento, è al centro perché hai impostato justify-content: center sul contenitore flex.
+Togliendolo, l'immagine starà a sinistra e sulla destra ci sarà uno spazio bianco della larghezza che si vuole settare
+fino a che non si allarga la pagina per contenere l'altra immagine.*/
+
+.gallery::after {
+    content: "";
+    width: 350px;
+  }

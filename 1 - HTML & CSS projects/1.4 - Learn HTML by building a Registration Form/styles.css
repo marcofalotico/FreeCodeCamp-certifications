@@ -1,0 +1,91 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #1b1b32;
+    color: #f5f6f7;
+    font-family: Tahoma;
+    font-size: 16px;
+  }
+  
+  h1, p {
+    margin: 1em auto;
+    text-align: center;
+  }
+  
+  /* margin:0 auto permette di togliere i margini per cui l'elemento si troverebbe sulla sinistra anzichè correttamente al centro, perchè col margine cadrebbe sulla riga successiva */
+  form {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding:2em;
+  }
+  
+  fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #3b3b4f;
+  }
+  
+  /* Puoi selezionare l'ultimo elemento di un tipo specifico usando le pseudo-classe CSS last-of-type */
+  fieldset:last-of-type {
+    border-bottom: none;
+  }
+  
+  label {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  
+  input,
+  textarea,
+  select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+  }
+  
+  input, textarea {
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+  }
+  
+  .inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+  }
+  
+/* Per dare uno stile al pulsante di invio, è possibile utilizzare un selettore di attributi, che seleziona un elemento in base al valore dell'attributo specificato. Ecco un esempio:
+Input[name="password"]
+Questo seleziona gli elementi di input con un valore di attributo name="password" */
+  input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white;
+    min-width: 300px;
+  }
+  
+  input[type="file"] {
+    padding: 1px 2px;
+  }
+
+  a {
+    color:#dfdfe2;
+  }
+
+
+
+
+
+
+
+
+
+
